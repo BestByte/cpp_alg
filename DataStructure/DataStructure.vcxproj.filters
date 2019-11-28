@@ -10,6 +10,9 @@
     <ClCompile Include="add.cpp">
       <Filter>SourceFiles</Filter>
     </ClCompile>
+    <ClCompile Include="plus.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HeaderFiles">
@@ -24,6 +27,9 @@
       <Filter>HeaderFiles</Filter>
     </ClInclude>
     <ClInclude Include="add.h">
+      <Filter>HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="plus.h">
       <Filter>HeaderFiles</Filter>
     </ClInclude>
   </ItemGroup>

@@ -35,9 +35,11 @@
   <ItemGroup>
     <ClInclude Include="add.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="plus.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="add.cpp" />
+    <ClCompile Include="plus.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
