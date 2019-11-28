@@ -1,5 +1,6 @@
 #include <iostream>
 #include "pch.h"
+#include "plus.h"
 using namespace std;
 
 #define  Maxsize 100  //最大空间
@@ -85,4 +86,84 @@ void print(SqList L)
 void DestroyList(SqList &L)
 {
 	if (L.elem) delete[]L.elem;    //释放存储空间
+}
+
+TEST(TestSqlist, TestNameSqlist) {
+	EXPECT_EQ(2, plus1(1, 2));
+	SqList myL;
+	int i, e, x;
+	cout << "1. 初始化\n";
+	cout << "2. 创建\n";
+	cout << "3. 取值\n";
+	cout << "4. 查找\n";
+	cout << "5. 插入\n";
+	cout << "6. 删除\n";
+	cout << "7. 输出\n";
+	cout << "8. 销毁\n";
+	cout << "0. 退出\n";
+	int choose = -1;
+	while (choose != 0)
+	{
+		cout << "请选择:";
+		cin >> choose;
+		switch (choose)
+		{
+		case 1://初始化顺序表
+			cout << "顺序表初始化..." << endl;
+			if (InitList(myL))
+				cout << "顺序表初始化成功！" << endl;
+			else
+				cout << "顺序表初始化失败！" << endl;
+			break;
+		case 2://创建顺序表
+			cout << "顺序表创建..." << endl;
+			cout << "输入整型数，输入-1结束" << endl;
+			if (CreateList(myL))
+				cout << "顺序表创建成功！" << endl;
+			else
+				cout << "顺序表创建失败！" << endl;
+			break;
+		case 3://取值
+			cout << "输入整型数i，取第i个元素输出" << endl;
+			cin >> i;
+			if (GetElem(myL, i, e))
+				cout << "第i个元素是： " << e << endl;
+			else
+				cout << "顺序表取值失败！" << endl;;
+			cout << "第i个元素是： " << e << endl;
+			break;
+		case 4://查找
+			cout << "请输入要查找的数x:";
+			cin >> x;
+			if (LocateELem(myL, x) == -1)
+				cout << "查找失败！" << endl;
+			else
+				cout << "查找成功！" << endl;
+			break;
+		case 5://插入
+			cout << "请输入要插入的位置和要插入的数据元素e:";
+			cin >> i >> e;
+			if (ListInsert_Sq(myL, i, e))
+				cout << "插入成功！" << endl;
+			else
+				cout << "插入失败！" << endl;
+			break;
+		case 6://删除
+			cout << "请输入要删除的位置i:";
+			cin >> i;
+			if (ListDelete_Sq(myL, i, e))
+				cout << " 删除成功！" << endl;
+			else
+				cout << "删除失败！" << endl;
+			break;
+		case 7://输出
+			print(myL);
+			break;
+		case 8://销毁
+			cout << "顺序表销毁..." << endl;
+			DestroyList(myL);
+			break;
+		}
+	}
+	EXPECT_TRUE(true);
 }
