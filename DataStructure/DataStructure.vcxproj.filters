@@ -7,6 +7,9 @@
     <ClCompile Include="test.cpp">
       <Filter>SourceFiles</Filter>
     </ClCompile>
+    <ClCompile Include="add.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HeaderFiles">
@@ -18,6 +21,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
+      <Filter>HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="add.h">
       <Filter>HeaderFiles</Filter>
     </ClInclude>
   </ItemGroup>
