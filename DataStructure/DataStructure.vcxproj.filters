@@ -13,6 +13,9 @@
     <ClCompile Include="plus.cpp">
       <Filter>SourceFiles</Filter>
     </ClCompile>
+    <ClCompile Include="sqlist.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HeaderFiles">
@@ -32,5 +35,8 @@
     <ClInclude Include="plus.h">
       <Filter>HeaderFiles</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
