@@ -1,2 +1,2 @@
 #pragma once
-int plus(int n1, int n2);
+int plus1(int n1, int n2);
